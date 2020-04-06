@@ -8,7 +8,7 @@
   "main": "n/a",
   "repository": "https://github.com/nejcm/nejcmursic.com",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/nejcm/nejcmursic.com/issues"
   },
   "scripts": {
     "lint": "eslint .",
@@ -31,7 +31,6 @@
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "test:e2e": "start-server-and-test start http://localhost:5020 cy:run",
-    "netlify": "gatsby-parallel-runner"
   },
   "husky": {
     "hooks": {
