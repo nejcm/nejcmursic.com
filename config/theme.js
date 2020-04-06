@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 import {darken} from 'polished';
 import {font} from '../src/utils/typography';
 
@@ -5,10 +6,10 @@ const primary = '#096464';
 const primary_dark = `${darken(0.05, primary)}`;
 
 const colors = {
-  primary: primary,
+  primary,
   secondary: '#EDF2F2',
   primary_light: '#D0E0E0',
-  primary_dark: primary_dark,
+  primary_dark,
   gray_darkest: '#909090',
   gray_darker: '#AAA',
   gray_dark: '#D0D0D0',

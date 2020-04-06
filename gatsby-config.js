@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 const path = require('path');
 const config = require('./config/website');
 const {createProxyMiddleware} = require('http-proxy-middleware');
@@ -77,13 +78,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
       },
     },
     {

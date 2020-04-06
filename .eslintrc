@@ -6,8 +6,7 @@
     "kentcdodds/jsx-a11y",
     "kentcdodds/jest",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "prettier/@typescript-eslint"
   ],
   "settings": {
     "react": {
@@ -45,7 +44,7 @@
       }
     ],
     "complexity": ["error", 15],
-    "valid-jsdoc": ["warn", { "requireReturn": false }],
+    "valid-jsdoc": ["warn", {"requireReturn": false}],
     "no-bitwise": "off",
     "consistent-return": "off",
     "no-negated-condition": "off",
@@ -54,13 +53,14 @@
     "no-console": "warn",
     "no-eval": "error",
     "no-debugger": "warn",
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
     "eqeqeq": "off",
     "import/no-useless-path-segments": "off",
     "max-lines": "off",
     "no-eq-null": "off",
     "react/jsx-indent": "off",
-    "jsx-a11y/label-has-associated-control": "off"
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-filename-extension": "off"
   },
   "overrides": [
     // Override some TypeScript rules just for .js files
