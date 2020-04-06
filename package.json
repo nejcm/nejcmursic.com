@@ -30,7 +30,8 @@
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
-    "test:e2e": "start-server-and-test start http://localhost:5020 cy:run"
+    "test:e2e": "start-server-and-test start http://localhost:5020 cy:run",
+    "netlify": "gatsby build"
   },
   "husky": {
     "hooks": {
