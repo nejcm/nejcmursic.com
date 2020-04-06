@@ -1,0 +1,10 @@
+export {default as Email} from './email';
+export {default as Facebook} from './facebook';
+export {default as Github} from './github';
+export {default as Link} from './link';
+export {default as Linkedin} from './linkedin';
+export {default as Message} from './message';
+export {default as Resume} from './resume';
+export {default as Stackoverflow} from './stackoverflow';
+export {default as Twitter} from './twitter';
+export {default as Wave} from './wave';

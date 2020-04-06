@@ -1,0 +1,74 @@
+{
+  "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/react",
+    "kentcdodds/jsx-a11y",
+    "kentcdodds/jest",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
+    "sourceType": "module" // Allows for the use of imports
+  },
+  "rules": {
+    "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "import/no-unresolved": "off",
+    "react/jsx-pascal-case": "off",
+    "import/order": "off",
+    "babel/camelcase": "off",
+    "jsx-a11y/label-has-for": "off",
+    "babel/quotes": "off",
+    "max-lines-per-function": ["error", 500],
+    "react/no-adjacent-inline-elements": "off",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 3
+      }
+    ],
+    "complexity": ["error", 15],
+    "valid-jsdoc": ["warn", { "requireReturn": false }],
+    "no-bitwise": "off",
+    "consistent-return": "off",
+    "no-negated-condition": "off",
+    "arrow-parens": "error",
+    "generator-star-spacing": "off",
+    "no-console": "warn",
+    "no-eval": "error",
+    "no-debugger": "warn",
+    "no-unused-vars": "error",
+    "eqeqeq": "off",
+    "import/no-useless-path-segments": "off",
+    "max-lines": "off",
+    "no-eq-null": "off",
+    "react/jsx-indent": "off",
+    "jsx-a11y/label-has-associated-control": "off"
+  },
+  "overrides": [
+    // Override some TypeScript rules just for .js files
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off" //
+      }
+    }
+  ]
+}
