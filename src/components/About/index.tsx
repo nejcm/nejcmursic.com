@@ -1,6 +1,6 @@
 import React from 'react';
 import {Col, Row} from 'react-grid-system';
-import resume from '../../../content/resume.js';
+import resume from '../../../content/resume';
 import blob from '../../../static/images/blob.svg';
 import Container from '../Container';
 import Education from '../Education';
@@ -9,9 +9,7 @@ import Section from '../Section';
 import Social from '../Social';
 import {BackgroundImage, Content, SocialWrapper, Wrapper} from './styles';
 
-export interface AboutProps {}
-
-const About: React.SFC<AboutProps> = () => {
+const About: React.SFC = () => {
   return (
     <Wrapper>
       <Section id="about" size="xl">

@@ -1,12 +1,11 @@
+import * as React from 'react';
 import {List, Wrapper} from './styles';
 
-export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {}
-
-export const TagList: React.SFC<TagProps> = (props) => {
+export const TagList: React.SFC = (props) => {
   return <List {...props} />;
 };
 
-const Tag: React.SFC<TagProps> = (props) => {
+const Tag: React.SFC = (props) => {
   return <Wrapper {...props} />;
 };
 

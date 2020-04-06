@@ -2,9 +2,9 @@ import React from 'react';
 import config from '../config/website';
 
 interface Props {
-  htmlAttributes: Object;
+  htmlAttributes: object;
   headComponents: Array<any>;
-  bodyAttributes: Object;
+  bodyAttributes: object;
   preBodyComponents: Array<any>;
   body: string;
   postBodyComponents: Array<any>;
@@ -29,7 +29,7 @@ export default function HTML(props: Props) {
         <noscript>This site runs best with JavaScript enabled.</noscript>
         {props.preBodyComponents}
         <div
-          key={`body`}
+          key="body"
           id="___gatsby"
           dangerouslySetInnerHTML={{__html: props.body}}
         />

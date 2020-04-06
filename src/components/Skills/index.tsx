@@ -1,19 +1,17 @@
-import {get} from '@nejcm/js-helpers';
+import {get} from 'lodash';
 import React from 'react';
 import {Col, Row} from 'react-grid-system';
 import theme from '../../../config/theme';
-import resume from '../../../content/resume.js';
+import resume from '../../../content/resume';
 import Container from '../Container';
 import Progress from '../Progress';
 import Section from '../Section';
 import {useTheme} from '../Theme';
 import {Wrapper} from './styles';
 
-export interface SkillsProps {}
-
-const skills: Array<any> = get(resume, 'skills');
+const skills: any = get(resume, 'skills');
 const other: Array<string> = get(resume, 'other');
-const Skills: React.SFC<SkillsProps> = () => {
+const Skills: React.SFC = () => {
   const {dark} = useTheme();
   if (!skills) {
     return null;

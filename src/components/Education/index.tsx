@@ -1,12 +1,11 @@
-import {get} from '@nejcm/js-helpers';
+import {get} from 'lodash';
 import React from 'react';
-import resume from '../../../content/resume.js';
+import resume from '../../../content/resume';
 import {Link} from '../Icons';
 import Section from '../Section';
 import Timeline from '../Timeline';
 import {Content, Wrapper} from './styles';
 
-export interface EducationProps {}
 export interface EducationType {
   id: number;
   institution: string;
@@ -17,7 +16,7 @@ export interface EducationType {
 }
 
 const education = get(resume, 'education');
-const Education: React.SFC<EducationProps> = () => {
+const Education: React.SFC = () => {
   return (
     <Wrapper>
       <h2 className="l">Education</h2>

@@ -1,8 +1,27 @@
-import {get} from '@nejcm/js-helpers';
 import {graphql, Link, useStaticQuery} from 'gatsby';
+import {get} from 'lodash';
+import * as React from 'react';
 import {Wrapper} from './styles';
 
-export interface BlogPopularProps {}
+export const popularQuery = graphql`
+  query {
+    allMarkdownRemark(
+      limit: 10
+      sort: {fields: [frontmatter___featured, frontmatter___date], order: DESC}
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`;
 
 export interface PostSummary {
   node: {
@@ -15,7 +34,7 @@ export interface PostSummary {
   };
 }
 
-const BlogPopular: React.SFC<BlogPopularProps> = () => {
+const BlogPopular: React.SFC = () => {
   const data = useStaticQuery(popularQuery);
 
   return (
@@ -40,23 +59,3 @@ const BlogPopular: React.SFC<BlogPopularProps> = () => {
 };
 
 export default BlogPopular;
-
-export const popularQuery = graphql`
-  query {
-    allMarkdownRemark(
-      limit: 10
-      sort: {fields: [frontmatter___featured, frontmatter___date], order: DESC}
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-`;

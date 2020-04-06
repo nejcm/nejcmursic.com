@@ -1,3 +1,4 @@
+import * as React from 'react';
 import theme from '../../../config/theme';
 
 type values = keyof typeof theme.spacer;

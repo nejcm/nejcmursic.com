@@ -5,5 +5,5 @@ export const mediaQueryMin = (bp: string): string =>
 export const mediaQueryBoth = (minBp: string, maxBp: string): string =>
   `@media (min-width: ${minBp}) and (max-width: ${maxBp})`;
 
-export const desktopOnly: string = `@media (min-width: 1024px)`;
-export const mobileOnly: string = `@media (max-width: 1023px)`;
+export const desktopOnly = `@media (min-width: 1024px)`;
+export const mobileOnly = `@media (max-width: 1023px)`;

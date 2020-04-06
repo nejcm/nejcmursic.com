@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import {get} from '@nejcm/js-helpers';
 import {graphql, Link} from 'gatsby';
-import {kebabCase} from 'lodash';
+import {get, kebabCase} from 'lodash';
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import theme from '../../config/theme';

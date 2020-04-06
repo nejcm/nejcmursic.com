@@ -1,10 +1,10 @@
 import Typography from 'typography';
 
-export const font: string =
+export const font =
   'Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif';
-export const codeFont: string =
+export const codeFont =
   'Consolas, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;';
-export const serifFont: string = 'Georgia, Times, "Times New Roman", serif';
+export const serifFont = 'Georgia, Times, "Times New Roman", serif';
 
 interface Props {
   rhythm: (x: number) => string;

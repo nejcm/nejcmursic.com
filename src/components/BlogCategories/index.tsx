@@ -1,15 +1,23 @@
-import {get} from '@nejcm/js-helpers';
 import {graphql, Link, useStaticQuery} from 'gatsby';
-import {kebabCase} from 'lodash';
+import {get, kebabCase} from 'lodash';
 import * as React from 'react';
 import Tag, {TagList} from '../Tag';
 
-export interface BlogCategoriesProps {}
+export const categoriesQuery = graphql`
+  query {
+    allMarkdownRemark(limit: 1000) {
+      group(field: frontmatter___category) {
+        fieldValue
+      }
+    }
+  }
+`;
+
 export interface Category {
   fieldValue: string;
 }
 
-const BlogCategories: React.SFC<BlogCategoriesProps> = () => {
+const BlogCategories: React.SFC = () => {
   const data = useStaticQuery(categoriesQuery);
 
   return (
@@ -34,13 +42,3 @@ const BlogCategories: React.SFC<BlogCategoriesProps> = () => {
 };
 
 export default BlogCategories;
-
-export const categoriesQuery = graphql`
-  query {
-    allMarkdownRemark(limit: 1000) {
-      group(field: frontmatter___category) {
-        fieldValue
-      }
-    }
-  }
-`;

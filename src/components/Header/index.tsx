@@ -25,8 +25,14 @@ const Header: React.SFC<HeaderProps> = ({headerTitle, ...rest}) => {
             <Container size={Container.sizes.lg}>
               <Flex>
                 <div className="left">
-                  <Link to={'/'}>
-                    <img className="logo" src={logo} width="auto" height={40} />
+                  <Link to="/">
+                    <img
+                      className="logo"
+                      src={logo}
+                      width="auto"
+                      height={40}
+                      alt={website.siteTitle}
+                    />
                   </Link>
                 </div>
                 <div className="right menu">

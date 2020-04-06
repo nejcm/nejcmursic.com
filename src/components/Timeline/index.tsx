@@ -1,10 +1,6 @@
-import {ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {Wrapper} from './styles';
 
-export interface TimelineComponent extends React.SFC<TimelineProps> {
-  Section: typeof Section;
-}
-export interface TimelineProps extends React.HTMLAttributes<HTMLElement> {}
 export interface TimelineSectionProps
   extends React.HTMLAttributes<HTMLElement> {
   sectionTitle: ReactNode;
@@ -29,4 +25,9 @@ const Section: React.SFC<TimelineSectionProps> = ({
 };
 
 Timeline.Section = Section;
+
+export interface TimelineComponent extends React.SFC {
+  Section: typeof Section;
+}
+
 export default Timeline;

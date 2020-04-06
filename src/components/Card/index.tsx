@@ -1,8 +1,7 @@
+import * as React from 'react';
 import {Wrapper} from './styles';
 
-export interface CardProps extends React.HTMLAttributes<HTMLElement> {}
-
-const Card: React.SFC<CardProps> = (props) => {
+const Card: React.SFC<React.HTMLAttributes<HTMLElement>> = (props) => {
   return <Wrapper {...props} />;
 };
 

@@ -4,13 +4,14 @@ export interface ThemeHookValues {
   dark: number;
   toggle: Function;
 }
-export interface ProviderProps {}
 
 const isBrowser = () => typeof window !== 'undefined';
-const name: string = 'theme';
+const name = 'theme';
 const defaultContextData: ThemeHookValues = {
   dark: 0,
-  toggle: () => {},
+  toggle: () => {
+    //
+  },
 };
 
 const ThemeContext = createContext(defaultContextData);
@@ -25,7 +26,7 @@ const useEffectTheme = (): [
   return [state, setState];
 };
 
-const ThemeProvider: React.SFC<ProviderProps> = ({children}) => {
+const ThemeProvider: React.SFC = ({children}) => {
   const [dark, setDark] = useEffectTheme();
   const toggle = (value: boolean | number | undefined) => {
     const isDark = value || !dark ? 1 : 0;

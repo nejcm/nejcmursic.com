@@ -1,12 +1,11 @@
-import {get} from '@nejcm/js-helpers';
+import {get} from 'lodash';
 import React from 'react';
-import resume from '../../../content/resume.js';
+import resume from '../../../content/resume';
 import {Link} from '../Icons';
 import Section from '../Section';
 import Timeline from '../Timeline';
 import {Content, Wrapper} from './styles';
 
-export interface ExperienceProps {}
 export interface ExperienceType {
   id: number;
   company: string;
@@ -17,7 +16,7 @@ export interface ExperienceType {
 }
 
 const experience = get(resume, 'experience');
-const Experience: React.SFC<ExperienceProps> = () => {
+const Experience: React.SFC = () => {
   return (
     <Wrapper>
       <h2 className="l">Experience</h2>

@@ -1,4 +1,4 @@
-import {get} from '@nejcm/js-helpers';
+import {get} from 'lodash';
 import React from 'react';
 import website from '../../../config/website';
 import {

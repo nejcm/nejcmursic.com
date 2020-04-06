@@ -1,12 +1,11 @@
+import * as React from 'react';
 import {Col, Row} from 'react-grid-system';
 import website from '../../../config/website';
 import profileImg from '../../assets/images/profile.png';
 import Container from '../Container';
 import {HeroContent, ImageWrapper, Wrapper} from './styles';
 
-export interface HeroProps {}
-
-const Hero: React.SFC<HeroProps> = () => {
+const Hero: React.SFC = () => {
   return (
     <Wrapper>
       <Container size={Container.sizes.lg}>

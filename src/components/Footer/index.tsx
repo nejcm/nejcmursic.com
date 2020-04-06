@@ -1,12 +1,11 @@
+import * as React from 'react';
 import {Col, Row} from 'react-grid-system';
 import theme from '../../../config/theme';
 import Container from '../Container';
 import Social from '../Social';
 import {Bottom, Wrapper} from './styles';
 
-export interface FooterProps {}
-
-const Footer: React.SFC<FooterProps> = () => {
+const Footer: React.SFC = () => {
   return (
     <Wrapper>
       <Container size={Container.sizes.lg}>
@@ -14,7 +13,12 @@ const Footer: React.SFC<FooterProps> = () => {
           <Row>
             <Col xs={12} sm={6}>
               <h3>Wish to talk?</h3>
-              <p>Let's get in touch! 🖐</p>
+              <p>
+                Let's get in touch!{' '}
+                <span role="img" aria-label="high five">
+                  🖐
+                </span>
+              </p>
               <div className="icons">
                 <Social color="#ccc" />
               </div>
@@ -25,12 +29,12 @@ const Footer: React.SFC<FooterProps> = () => {
                   Icons made by{' '}
                   <a
                     href="https://www.flaticon.com/authors/freepik"
-                    header="Freepik"
+                    title="Freepik"
                   >
                     Freepik
                   </a>{' '}
                   from{' '}
-                  <a href="https://www.flaticon.com/" header="Flaticon">
+                  <a href="https://www.flaticon.com/" title="Flaticon">
                     www.flaticon.com
                   </a>
                 </div>
@@ -38,12 +42,12 @@ const Footer: React.SFC<FooterProps> = () => {
                   Icons made by{' '}
                   <a
                     href="https://www.flaticon.com/authors/pixel-perfect"
-                    header="Pixel perfect"
+                    title="Pixel perfect"
                   >
                     Pixel perfect
                   </a>{' '}
                   from{' '}
-                  <a href="https://www.flaticon.com/" header="Flaticon">
+                  <a href="https://www.flaticon.com/" title="Flaticon">
                     www.flaticon.com
                   </a>
                 </div>

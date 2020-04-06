@@ -20,6 +20,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 }
 
 const Layout = ({headerTitle, children}: Props) => {
+  // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`;
 
   return (

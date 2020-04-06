@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 export interface ProgressProps extends React.HTMLAttributes<HTMLElement> {
   value: number;
   color?: string;
@@ -18,7 +20,7 @@ const Progress: React.SFC<ProgressProps> = ({
           height: '100%',
           backgroundColor: color,
         }}
-      ></div>
+      />
     </div>
   );
 };

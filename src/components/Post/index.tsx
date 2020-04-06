@@ -1,10 +1,20 @@
+import * as React from 'react';
 import {Wrapper} from './styles';
 
-export interface PostProps {
-  post: any;
+export interface PostInterface {
+  html: string;
+  excerpt?: string;
+  frontmatter: {
+    title: string;
+    description?: string;
+    date: string;
+  };
+  fields: {
+    slug: string;
+  };
 }
 
-const Post: React.SFC<PostProps> = ({post}) => {
+const Post: React.SFC<{post: PostInterface}> = ({post}) => {
   return (
     <Wrapper>
       <section dangerouslySetInnerHTML={{__html: post.html}} />

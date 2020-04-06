@@ -1,18 +1,10 @@
 import {Link} from 'gatsby';
+import * as React from 'react';
+import {PostInterface} from '../Post';
 import {Article} from './styles';
 
 export interface PostThumbnailProps {
-  post: {
-    excerpt?: string;
-    frontmatter: {
-      title: string;
-      description?: string;
-      date: string;
-    };
-    fields: {
-      slug: string;
-    };
-  };
+  post: PostInterface;
 }
 
 const PostThumbnail: React.SFC<PostThumbnailProps> = ({post}) => {

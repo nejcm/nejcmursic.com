@@ -1,11 +1,11 @@
-import {measure2Css} from '@nejcm/js-helpers';
+import * as React from 'react';
 import theme from '../../../config/theme';
 import {Wrapper} from './styles';
 
 export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
   size?: string | number;
   padding?: boolean;
-  style?: Object;
+  style?: object;
 }
 
 interface Sizes {
@@ -19,9 +19,9 @@ interface Component extends React.SFC<ContainerProps> {
   sizes: Sizes;
 }
 
-const Container: Component = ({size, padding = true, style, ...rest}) => {
+const Container: Component = ({size, style, ...rest}) => {
   const css = {
-    maxWidth: size ? measure2Css(size) : 'auto',
+    maxWidth: size ? (typeof size === 'string' ? size : `${size}px`) : 'auto',
     ...style,
   };
   return <Wrapper style={css} {...rest} />;
