@@ -2,7 +2,8 @@ module.exports = {
   siteTitle: 'Nejc Mursic',
   siteTitleShort: 'nejcm',
   siteTitleLong: 'The personal website of Nejc Mursic',
-  siteDescription: 'Developer by night.',
+  siteDescription:
+    'Hi, my name is Nejc and I am a web developer. For the past 13 years, I have been developing web apps and other software.',
   siteUrl: process.env.ROOT_URL || 'https://nejcmursic.com',
   minibio: `
     <strong>Nejc Mursic</strong> is a Web developer. 
@@ -15,6 +16,8 @@ module.exports = {
     'Web',
     'React',
     'Javascript',
+    'Node.js',
+    '.NET',
   ],
   lang: 'en',
   pathPrefix: '/',

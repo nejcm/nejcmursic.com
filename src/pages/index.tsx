@@ -13,7 +13,11 @@ interface Props {
 const Home = ({location}: Props) => {
   return (
     <Layout location={location}>
-      <SEO title={website.siteTitle} suffix={false} />
+      <SEO
+        title={website.siteTitle}
+        description={website.siteDescription}
+        suffix={false}
+      />
       <Hero />
       <About />
       <Skills />

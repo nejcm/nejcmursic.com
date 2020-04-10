@@ -1,11 +1,9 @@
 module.exports = {
   about: `<p>Hi! My name is Nejc. I am a web developer and for the past 13 years, 
-  I've been developing apps for the web and other software. 
-  I do this for a living and I love what I do. 
+  I've been developing web apps and other software. I do this for a living and I love what I do. 
   I also spend a lot of time improving my skills and learning new techniques.</p>
   <p>In my spare time I work on my dev. passion or community projects. 
-  Besides that you can find me spending time together with friends, 
-  watching a movie or playing games.</p>`,
+  Besides that you can find me spending time with friends, watching a movie or playing sports.</p>`,
   education: [
     {
       id: 1,
