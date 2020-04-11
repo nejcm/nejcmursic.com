@@ -1,18 +1,8 @@
 # Nejc Muršič personal website
 
 <br />
-
-<a href="https://www.joypixels.com/profiles/emoji/framed-picture">
-  <img
-    height="128"
-    width="128"
-    alt="picture"
-    src="https://d1j8pt39hxlh3d.cloudfront.net/emoji/emojione/5.5/png/unicode/128/1f5bc.png?119038208"
-  />
-</a>
-
 <br />
-<br />
+
 
 [![All Contributors][all-contributors-badge]](#contributors)
 [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)

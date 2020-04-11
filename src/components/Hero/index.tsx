@@ -12,8 +12,8 @@ const Hero: React.SFC = () => {
         <Row align="center">
           <Col className="left" xs={12} sm={8} md={6}>
             <HeroContent>
-              <h1>Sloth by day... Developer by night.</h1>
-              <h3>Hey there, I'm Nejc - web developer</h3>
+              <h1>Hey there, I&#39;m Nejc - web developer</h1>
+              <h3>Helping to make the world a better place with software.</h3>
               <a
                 href={`mailto:${website.email}`}
                 target="_blank"
