@@ -5,9 +5,11 @@ export const Wrapper = styled.header`
   > .top {
     position: relative;
     z-index: 100;
-    background-color: ${(props: {theme: {dark: number}}) =>
+    background-color: ${(props: {background?: string; theme: {dark: number}}) =>
       props.theme.dark
         ? theme.colors.bg_dark_color_light
+        : props.background
+        ? props.background
         : theme.colors.primary_light};
   }
 

@@ -6,7 +6,7 @@ import SEO from '../components/Seo';
 const title = '404: Not Found';
 const NotFoundPage = () => {
   return (
-    <Layout>
+    <Layout headerBackground="transparent">
       <SEO title={title} />
       <Page404 />
     </Layout>

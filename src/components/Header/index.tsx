@@ -11,14 +11,19 @@ import {Flex, Title, Wrapper} from './styles';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
   headerTitle?: ReactNode;
+  headerBackground?: string;
 }
 
-const Header: React.SFC<HeaderProps> = ({headerTitle, ...rest}) => {
+const Header: React.SFC<HeaderProps> = ({
+  headerTitle,
+  headerBackground,
+  ...rest
+}) => {
   const {dark, toggle} = useTheme();
   const switchTitle = dark ? 'Deactivate dark mode' : 'Activate dark mode';
 
   return (
-    <Wrapper {...rest}>
+    <Wrapper background={headerBackground} {...rest}>
       <div className="top">
         <Headroom>
           <div className="nav-bar">

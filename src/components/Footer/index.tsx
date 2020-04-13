@@ -14,7 +14,7 @@ const Footer: React.SFC = () => {
             <Col xs={12} sm={6}>
               <h3>Wish to talk?</h3>
               <p>
-                Let's get in touch!{' '}
+                Let&#39;s get in touch!{' '}
                 <span role="img" aria-label="high five">
                   🖐
                 </span>

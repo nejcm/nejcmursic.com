@@ -3,12 +3,15 @@ import React from 'react';
 import BlogCategories from '../components/BlogCategories';
 import BlogPopular from '../components/BlogPopular';
 import SidebarLayout from '../components/Layout/sidebar';
+import {PostInterface} from '../components/Post';
 import PostThumbnail from '../components/PostThumbnail';
 import SEO from '../components/Seo';
 
 interface Props {
   data: {
-    allMarkdownRemark: any;
+    allMarkdownRemark: {
+      edges: Array<{node: PostInterface}>;
+    };
     site: {
       siteMetadata: {
         title: string;
@@ -36,7 +39,7 @@ const BlogIndex = ({data, location}: Props) => {
   return (
     <SidebarLayout sidebar={sidebar} headerTitle={title}>
       <SEO title="Blog" />
-      {posts.map(({node}: any) => (
+      {posts.map(({node}: {node: PostInterface}) => (
         <PostThumbnail key={node.fields.slug} post={node} />
       ))}
     </SidebarLayout>

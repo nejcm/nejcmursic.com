@@ -35,11 +35,10 @@ const Wrapper = styled.div`
 
 const max = 4;
 const num = Math.floor(Math.random() * max) + 1;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const image = require(`../../assets/images/404_${num}.png`);
 
-interface Props {}
-
-const NotFoundPage = ({}: Props) => {
+const NotFoundPage = () => {
   return (
     <Container size={Container.sizes.lg}>
       <Wrapper>
@@ -49,7 +48,7 @@ const NotFoundPage = ({}: Props) => {
             <p>
               You may have misstyped the address or the page may have moved.
             </p>
-            <Link to={`/`}>
+            <Link to="/">
               <button>Go to homepage</button>
             </Link>
           </Col>
@@ -61,13 +60,15 @@ const NotFoundPage = ({}: Props) => {
           <Col xs={12} md={6}>
             <Card>
               <h3>
-                <span style={{marginRight: 12}}>
-                  <Message />
-                </span>
+                <Message style={{marginRight: 12}} />
                 Get in touch
               </h3>
               <p>Say hi and shot me a message.</p>
-              <a href={`mailto:${website.email}`} target="_blank">
+              <a
+                href={`mailto:${website.email}`}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 Email me →
               </a>
             </Card>
@@ -75,9 +76,7 @@ const NotFoundPage = ({}: Props) => {
           <Col xs={12} md={6}>
             <Card>
               <h3>
-                <span style={{marginRight: 12}}>
-                  <Resume />
-                </span>
+                <Resume style={{marginRight: 12}} />
                 My resume
               </h3>
               <p>Check out my CV.</p>

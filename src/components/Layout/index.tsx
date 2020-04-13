@@ -16,10 +16,11 @@ const Main = styled.main``;
 
 interface Props extends React.HTMLAttributes<HTMLElement> {
   headerTitle?: ReactNode;
+  headerBackground?: string;
   location?: Location;
 }
 
-const Layout = ({headerTitle, children}: Props) => {
+const Layout = ({headerTitle, headerBackground, children}: Props) => {
   // eslint-disable-next-line no-undef
   const rootPath = `${__PATH_PREFIX__}/`;
 
@@ -28,7 +29,10 @@ const Layout = ({headerTitle, children}: Props) => {
       {({dark}: {dark: number}) => (
         <StyledThemeProvider theme={{dark}}>
           <Global styles={globalStyles(dark)} />
-          <Header headerTitle={headerTitle} />
+          <Header
+            headerTitle={headerTitle}
+            headerBackground={headerBackground}
+          />
           <Main>{children}</Main>
           <Footer />
         </StyledThemeProvider>
