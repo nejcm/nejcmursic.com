@@ -4,7 +4,7 @@ const here = (...p) => path.join(__dirname, ...p);
 
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': `<rootDir>/config/tests/jest-preprocess.js`,
+    '^.+\\.(jsx|tsx|js|ts)?$': `<rootDir>/config/tests/jest-preprocess.js`,
   },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
