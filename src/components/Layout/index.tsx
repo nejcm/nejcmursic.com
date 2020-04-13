@@ -2,7 +2,7 @@ import {Global} from '@emotion/core';
 import styled from '@emotion/styled';
 import {ThemeProvider as StyledThemeProvider} from 'emotion-theming';
 import React, {ReactNode} from 'react';
-import {setConfiguration} from 'react-grid-system';
+import {ScreenClassProvider, setConfiguration} from 'react-grid-system';
 import theme from '../../../config/theme';
 import Footer from '../Footer';
 import Header from '../Header';
@@ -25,19 +25,21 @@ const Layout = ({headerTitle, headerBackground, children}: Props) => {
   const rootPath = `${__PATH_PREFIX__}/`;
 
   return (
-    <ThemeProvider>
-      {({dark}: {dark: number}) => (
-        <StyledThemeProvider theme={{dark}}>
-          <Global styles={globalStyles(dark)} />
-          <Header
-            headerTitle={headerTitle}
-            headerBackground={headerBackground}
-          />
-          <Main>{children}</Main>
-          <Footer />
-        </StyledThemeProvider>
-      )}
-    </ThemeProvider>
+    <ScreenClassProvider fallbackScreenClass="xl">
+      <ThemeProvider>
+        {({dark}: {dark: number}) => (
+          <StyledThemeProvider theme={{dark}}>
+            <Global styles={globalStyles(dark)} />
+            <Header
+              headerTitle={headerTitle}
+              headerBackground={headerBackground}
+            />
+            <Main>{children}</Main>
+            <Footer />
+          </StyledThemeProvider>
+        )}
+      </ThemeProvider>
+    </ScreenClassProvider>
   );
 };
 

@@ -44,6 +44,7 @@ export const Wrapper = styled.div`
 
       > div {
         &:first-of-type {
+          width: auto;
           transition: border 0.25s ease;
           border-left: 2px solid
             ${(props: {theme: {dark: number}}) =>
