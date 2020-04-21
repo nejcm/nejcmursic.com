@@ -2,17 +2,17 @@ import * as React from 'react';
 import theme from '../../../config/theme';
 import {Wrapper} from './styles';
 
-export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
-  size?: string | number;
-  padding?: boolean;
-  style?: object;
-}
-
-interface Sizes {
+type Sizes = {
   xs?: number;
   sm?: number;
   md?: number;
   lg?: number;
+};
+
+export interface ContainerProps extends React.HTMLAttributes<HTMLElement> {
+  size?: keyof Sizes | number;
+  padding?: boolean;
+  style?: React.CSSProperties;
 }
 
 interface Component extends React.SFC<ContainerProps> {

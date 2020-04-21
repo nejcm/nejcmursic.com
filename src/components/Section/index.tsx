@@ -6,7 +6,7 @@ type values = keyof typeof theme.spacer;
 export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
   size?: values | Array<values | 0>;
   background?: string;
-  style?: object;
+  style?: React.CSSProperties;
 }
 
 const Section: React.SFC<SectionProps> = ({
