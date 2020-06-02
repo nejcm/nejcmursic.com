@@ -1,6 +1,6 @@
 const path = require(`path`);
 const {createFilePath} = require(`gatsby-source-filesystem`);
-const _ = require('lodash');
+const {kebabCase} = require('lodash');
 
 exports.createPages = async ({graphql, actions}) => {
   const {createPage} = actions;
@@ -63,7 +63,7 @@ exports.createPages = async ({graphql, actions}) => {
   // Make category pages
   categories.forEach((category) => {
     createPage({
-      path: `/blog/category/${_.kebabCase(category.fieldValue)}/`,
+      path: `/blog/category/${kebabCase(category.fieldValue)}/`,
       component: categoryTemplate,
       context: {
         category: category.fieldValue,
