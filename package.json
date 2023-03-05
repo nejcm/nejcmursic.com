@@ -33,11 +33,6 @@
     "test:e2e": "start-server-and-test start http://localhost:5020 cy:run",
     "netlify": "gatsby build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "^7.10.1",
     "@babel/runtime": "^7.10.1",

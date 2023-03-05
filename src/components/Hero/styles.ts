@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
     props.theme.dark
       ? theme.colors.bg_dark_color_light
       : theme.colors.primary_light};
-  margin-bottom: 6rem;
   overflow: hidden;
 
   .left {
@@ -26,6 +25,12 @@ export const HeroContent = styled.div`
   }
   h3 {
     margin-bottom: 2.5rem;
+  }
+  a {
+    margin-right: 1rem;
+    button {
+      min-width: 100px;
+    }
   }
 `;
 

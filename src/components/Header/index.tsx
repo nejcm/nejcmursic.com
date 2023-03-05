@@ -3,7 +3,7 @@ import React, {ReactNode} from 'react';
 import Headroom from 'react-headroom';
 import theme from '../../../config/theme';
 import website from '../../../config/website';
-import logo from '../../../static/images/logo.png';
+import logo from '../../../static/images/logo_square.png';
 import Container from '../Container';
 import {Wave} from '../Icons';
 import {useTheme} from '../Theme';
@@ -35,7 +35,7 @@ const Header: React.SFC<HeaderProps> = ({
                       className="logo"
                       src={logo}
                       width="auto"
-                      height={40}
+                      height={48}
                       alt={website.siteTitle}
                     />
                   </Link>

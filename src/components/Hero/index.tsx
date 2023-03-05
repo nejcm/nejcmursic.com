@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {Col, Row} from 'react-grid-system';
+import { Col, Row } from 'react-grid-system';
 import website from '../../../config/website';
 import profileImg from '../../assets/images/profile.png';
 import Container from '../Container';
-import {HeroContent, ImageWrapper, Wrapper} from './styles';
+import { HeroContent, ImageWrapper, Wrapper } from './styles';
 
 const Hero: React.SFC = () => {
   return (
@@ -21,6 +21,13 @@ const Hero: React.SFC = () => {
               >
                 <button>CONTACT ME</button>
               </a>
+              <a
+                    href={`/${website.cv}`}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                  >
+                    <button>CV</button>
+                  </a>
             </HeroContent>
           </Col>
           <Col className="right" xs={12} sm={4} md={6}>

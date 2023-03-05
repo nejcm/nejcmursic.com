@@ -21,7 +21,7 @@ module.exports = {
   ],
   lang: 'en',
   pathPrefix: '/',
-  siteLogo: 'images/logo.png',
+  siteLogo: 'images/logo_square.png',
   author: 'Nejc Mursic',
   organization: 'Nejc Mursic',
   email: 'nmursi2@gmail.com',
